@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg-porcelain: #fafafa;
+  --bg-panel: #efedea;
+  --ink: #17181b;
+  --ink-muted: #646260;
+  --hairline: #d8d6d1;
+  --metal: #b9b6ae;
+  --facet: #dceaf0;
+}
+
+@theme inline {
+  --color-porcelain: var(--bg-porcelain);
+  --color-panel: var(--bg-panel);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-hairline: var(--hairline);
+  --color-metal: var(--metal);
+  --color-facet: var(--facet);
+
+  --font-display: var(--font-serif-display);
+  --font-sans: var(--font-grotesque);
+
+  --radius-chip: 10px;
+  --radius-card: 22px;
+  --radius-panel: 36px;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--bg-porcelain);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--facet);
+  color: var(--ink);
+}
+
+.container-isg {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-isg {
+    padding-inline: 40px;
+  }
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
